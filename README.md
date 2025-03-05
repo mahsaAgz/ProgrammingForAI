@@ -22,7 +22,7 @@ Run the script with the following command:
 python celebA_GAN.py --seed 0 --img_path ./celeba --stop_epoch 10 --output_path ./
 ```
 
-# **Project 2: Custom Language Model (Transformer & RNN) for ELI5 Dataset**
+# **Project 2 Custom Language Model: Transformer & RNN for ELI5 Dataset**
 
 This project implements a **custom language model** that combines **Transformer decoder layers** and a **Recurrent Neural Network (RNN)** to train on the **ELI5 dataset**.
 
@@ -46,4 +46,32 @@ This project implements a **custom language model** that combines **Transformer 
 Run the script with:
 ```bash
 python eli_Lm.py --seed 1 --stop_epoch 2 --output_path ./
+```
+
+# **Project 3 Vision-Language Model: Transformer & CNN for Image and Text Understanding**  
+
+This project implements a **multi-stage vision-language model** combining **Convolutional Neural Networks (CNNs) for image classification** and **Transformer decoder layers for text generation**. It processes both **image and text inputs** for multimodal learning.  
+
+## **Project Overview**  
+- **Stage 1: CNN-based Image Classifier**  
+  - Convolutional layers extract image features.
+  - Uses CIFAR-10 dataset for training and evaluation.  
+- **Stage 2: Transformer Decoder-based Language Model**  
+  - Processes text input from the **ELI5 dataset**.
+  - Uses **GPT-2 tokenizer** for tokenization and embedding.  
+- **Stage 3: Vision-Language Model (VLM)**  
+  - Integrates both **image classification and text generation**.  
+  - Maps image features to text using a **projection layer**.  
+
+## **Training Setup**  
+- **Loss**: Cross-Entropy Loss  
+- **Optimizer**: Adam (LR: 5e-4)  
+- **Batch Size**: 16  
+- **Epochs**: 3 (stops at specified epoch)  
+- **Reproducibility**: Fixed random seed ensures consistent results.  
+
+## **Usage**  
+Run the script with:  
+```bash
+python visionLanguageModel.py --seed 0 --total_epoch 3 --output_path ./
 
