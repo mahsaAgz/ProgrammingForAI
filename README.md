@@ -22,10 +22,7 @@ Run the script with the following command:
 python celebA_GAN.py --seed 0 --img_path ./celeba --stop_epoch 10 --output_path ./
 ```
 
-## **Project 2: Custom Language Model for ELI5 Dataset**
-### **README.md**
-```md
-# **Custom Language Model: Transformer & RNN for ELI5 Dataset**  
+# **Project 2: Custom Language Model (Transformer & RNN) for ELI5 Dataset**
 
 This project implements a **custom language model** that combines **Transformer decoder layers** and a **Recurrent Neural Network (RNN)** to train on the **ELI5 dataset**.
 
